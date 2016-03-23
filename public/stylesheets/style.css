@@ -1,0 +1,36 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+#search.wrap {
+    position: absolute;
+    top: 10%;
+    left: 80%;
+    width: 5%;
+    height: 4.5%;
+    font-size: 110%;
+}
+#input {
+    position: absolute;
+    top: 6%;
+    left: 80%;
+}
+#pictures {
+    width: 75%;
+    height: 100%;
+}
+#description {
+    position: absolute;
+    top: 16%;
+    left: 80%;
+    font-weight: bold;
+}
+#hottest {
+    position: absolute;
+    top: 19%;
+    left: 80%;
+}
