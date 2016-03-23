@@ -27,10 +27,7 @@ function searchKeyword(keyword) {
         if (title.search(keyword) !== -1) {
             var img = new Image();
             img.src = obj.data[i].link;
-            if (img.src.search(".gif") !== -1) {
-                var newsrc = img.src.split("h.");
-                img.src = newsrc[0] + "." + newsrc[1];
-            }
+
             if (img.src.search("/a/") !== -1) {
                 var album = requestjuttu(obj.data[i].id);
                 img.src = album.data.images[0].link;
@@ -39,7 +36,10 @@ function searchKeyword(keyword) {
                 link.appendChild(node);
                 link.href = album.data.link;
                 document.getElementById("pictures").appendChild(link);
-
+            }
+            if (img.src.search(".gif") !== -1) {
+                var newsrc = img.src.split("h.");
+                img.src = newsrc[0] + "." + newsrc[1];
             }
             var node = document.createTextNode(obj.data[i].title);
             document.getElementById("pictures").appendChild(node);
@@ -58,4 +58,3 @@ function requestjuttu(id) {
     var obj = JSON.parse(json);
     return obj;
 }
-
